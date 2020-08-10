@@ -1,0 +1,121 @@
+.first {
+  &_btn {
+    font-size: 18px;
+    height: 50px;
+    width: 100px;
+    background: #464644;
+    display: inline-block;
+    color: #fff;
+    border-radius: 10px;
+    line-height: 2.7;
+    margin-top: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    &_disable {
+      font-size: 18px;
+      height: 50px;
+      width: 100px;
+      background: #464644;
+      display: inline-block;
+      color: #fff;
+      border-radius: 10px;
+      line-height: 2.7;
+      margin-top: 10px;
+      margin-left: 10px;
+      cursor: pointer;
+      opacity: 0.6;
+      pointer-events: none;
+    }
+    &:hover {
+      background: #7d7d7d;
+    }
+  }
+  &_btn2 {
+    font-size: 18px;
+    line-height: 2.7;
+    height: 50px;
+    width: 100px;
+    background: #eaeaea;
+    display: inline-block;
+    color: #fff;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-top: 50px;
+    color: #333;
+    cursor: pointer;
+    &:hover {
+      background: #bfbfbf;
+    }
+  }
+  &_company {
+    margin-bottom: 40px;
+    &_head {
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: var(--third);
+    }
+
+    &_head3 {
+      text-align: center;
+      font-size: 18px;
+      font-weight: 400;
+      margin-bottom: 10px;
+      margin-top: 50px;
+      color: #7d7d7d;
+    }
+    &_sub {
+      text-align: center;
+      font-size: 16px;
+      margin-bottom: 10px;
+      color: #7d7d7d;
+      margin-top: -10px;
+    }
+    &_form {
+      margin: 0 auto;
+      margin-top: 50px;
+      margin-bottom: 20px;
+      width: 80%;
+      display: block;
+      label {
+        font-size: 16px;
+        font-weight: bold;
+        color: var(--third);
+
+        margin-bottom: 20px;
+        text-align: right !important;
+      }
+      input {
+        margin-top: 10px;
+        width: 100%;
+        border: 2px solid #a8aab1;
+        height: 40px;
+        border-radius: 5px;
+        padding: 10px;
+        background-color: var(--bgColor);
+        color: var(--third);
+        &::placeholder {
+          color: #7d7d7d;
+        }
+        &:focus {
+          border-color: #7d7d7d;
+        }
+      }
+      textarea {
+        margin-top: 10px;
+        width: 100%;
+        height: 150px;
+        border: 2px solid #a8aab1;
+        border-radius: 10px;
+        color: var(--third);
+        padding: 10px;
+        background-color: var(--bgColor);
+        resize: none;
+        &:focus {
+          border-color: #7d7d7d;
+        }
+      }
+    }
+  }
+}

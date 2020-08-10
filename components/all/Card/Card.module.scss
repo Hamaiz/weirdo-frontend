@@ -1,0 +1,104 @@
+.card {
+  width: 220px;
+  height: 330px;
+  border-radius: 20px;
+  margin-bottom: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  transition: box-shadow 0.5s;
+  &:hover{
+      transition: box-shadow 0.5s;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.25);
+  }
+
+  &_desc {
+    position: relative;
+    height: 100%;
+    border-radius: 20px;
+    background-color: var(--secondaryColor);
+    box-shadow: 0 1px 2px var(--box);
+    border: 2px solid var(--box);
+    .multi_button {
+      z-index: 0;
+      position: absolute;
+      top: 1.25rem;
+      left: 1.25rem;
+      border-radius: 100%;
+      width: 0rem;
+      height: 0rem;
+      opacity: 0;
+      transform: translate(-50%, -50%);
+      transition: 0.25s cubic-bezier(0.25, 0, 0, 1);
+      pointer-events: none;
+
+      button {
+        cursor: pointer;
+        display: grid;
+        place-items: center;
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        border: none;
+        border-radius: 100%;
+        background: #fff;
+        color: #464646;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        transition: 0.25s cubic-bezier(0.25, 0, 0, 1);
+        box-shadow: 0 0 0rem -0.25rem var(--background);
+        justify-content: center;
+        align-items: center;
+        pointer-events: visible;
+        svg{
+          pointer-events: none;
+            width: 20px;
+            height: 20px;
+        }
+        &:hover {
+          background: #000;
+          fill: #ffff;
+          box-shadow: 0 0 1rem -0.25rem var(--background);
+        }
+        &:nth-child(1) {
+            left: 62.5%;
+            top: 18.75%;
+          }
+          &:nth-child(2) {
+            left: 37.5%;
+            top: 18.75%;
+          }
+          &:nth-child(3) {
+            left: 18.75%;
+            top: 37.5%;
+          }
+          &:nth-child(4) {
+            left: 18.75%;
+            top: 62.5%;
+          }
+      }
+    }
+    &:hover .multi_button,
+    .multi_button:focus-within {
+      width: 10rem;
+      height: 10rem;
+      opacity: 1;
+      pointer-events: visible;
+    }
+
+  }
+  &:hover .multi_button,
+  .multi_button:focus-within {
+    width: 8rem;
+    height: 8rem;
+    opacity: 1;
+    pointer-events: visible;
+  }
+}
+
+.other{
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}

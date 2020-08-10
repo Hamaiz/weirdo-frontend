@@ -1,0 +1,187 @@
+$tab: '(max-width: 991px)';
+$screen: '(min-width: 992px)';
+
+.signup {
+  &_name {
+    margin-top: 150px;
+    margin-bottom: 50px;
+    margin-left: 5%;
+    font-size: 24px;
+    font-weight: 500;
+    @media #{$tab} {
+      font-size: 18px;
+    }
+    span {
+      margin-right: 5%;
+      font-size: 14px;
+      line-height: 2.5;
+      color: #7d7d7d;
+      a {
+        margin-left: 5px;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  &_form {
+    margin: 0 auto;
+    margin-bottom: 100px;
+    width: 90%;
+    border-radius: 30px;
+    padding: 50px;
+    background: #fff;
+    box-shadow: 2px 2px 2px #e4e6eb, 2px 3px 10px #e4e6eb;
+    @media #{$tab} {
+      padding: 50px 15px;
+    }
+    &_control {
+      width: 100%;
+      &_label {
+        margin-left: 5%;
+        margin-bottom: 10px;
+        @media #{$tab} {
+          margin-left: 0%;
+        }
+      }
+      &_input {
+        margin: 0 auto;
+        width: 90%;
+        @media #{$tab} {
+          width: 100%;
+        }
+        input {
+          width: 100%;
+          height: 40px;
+          border: 3px solid #7d7d7d;
+          border-radius: 5px;
+          padding: 10px;
+          &:focus {
+            border-color: #464646;
+            outline: none;
+          }
+          &::placeholder {
+            color: #7d7d7d;
+            @media #{$tab} {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+      &_checkbox {
+        margin-top: 20px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      &_error {
+        color: #dd4b39;
+        margin-left: 6%;
+        margin-bottom: 40px;
+        margin-top: 10px;
+        height: 25px;
+        @media #{$tab} {
+          font-size: 12px;
+          margin-bottom: 30px;
+        }
+      }
+    }
+    &_btn {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      width: 50%;
+      height: 50px;
+      border: 3px solid #464646;
+      background: #464646;
+      color: #fff;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 10px;
+      transition: 0.3s;
+      @media #{$tab} {
+        width: 80%;
+        margin-bottom: 50px;
+      }
+      &:hover {
+        transition: 0.3s;
+        color: #464646;
+        background: transparent;
+      }
+      &:focus {
+        background: transparent;
+        color: #464646;
+      }
+    }
+    &_or {
+      margin: 20px auto;
+      position: relative;
+      width: 40%;
+      @media #{$tab} {
+        width: 80%;
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        width: 40%;
+        height: 2px;
+        background-color: #464646;
+        top: 50%;
+        right: 0px;
+        transform: translateY(-50%);
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        width: 40%;
+        height: 2px;
+        background-color: #464646;
+        top: 50%;
+        left: 0px;
+        transform: translateY(-50%);
+      }
+    }
+    &_social {
+      &_g {
+        margin-top: 50px;
+        width: 80%;
+        height: 50px;
+        border: 3px solid #dd4b39;
+        background-color: #dd4b39;
+        color: #fff;
+        font-weight: bold;
+        border-radius: 10px;
+        cursor: pointer;
+        line-height: 2.8;
+        margin-left: auto;
+        margin-right: auto;
+        &:hover {
+          transition: 0.3s;
+          color: #dd4b39;
+          background: transparent;
+        }
+      }
+      &_t {
+        margin-top: 50px;
+        width: 80%;
+        height: 50px;
+        border: 3px solid #55acee;
+        background-color: #55acee;
+        color: #fff;
+        font-weight: bold;
+        border-radius: 10px;
+        cursor: pointer;
+        line-height: 2.8;
+        margin-left: auto;
+        margin-right: auto;
+        &:hover {
+          transition: 0.3s;
+          color: #55acee;
+          background: transparent;
+        }
+      }
+    }
+  }
+}
+
+.modal_text {
+  font-weight: 500;
+}

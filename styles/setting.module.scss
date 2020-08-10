@@ -1,0 +1,51 @@
+.setting {
+  margin-top: 150px;
+  margin-bottom: 150px;
+  &_container {
+    background: var(--secondaryColor);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 1px 2px var(--box);
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    &_name{
+        font-size: 25px;
+        font-weight: bold;
+        color: var(--third);
+        &_tooltip{
+            display: inline-block;
+            margin-left: 15px;
+            background: #464646;
+            width: 25px;
+            height: 25px;
+            font-size: 18px;
+            color: #fff;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 100%;
+            cursor: pointer;
+            &:hover{
+                background: #7d7d7d;
+            }
+        }
+    }
+    &_btn{
+        background: #464646;
+        font-size: 18px;
+        padding: 10px 20px;
+        border-radius: 10px;
+        color: #fff;
+        cursor: pointer;
+        &:hover{
+            background-color: #7d7d7d;
+        }
+    }
+    &_location{
+        font-size: 20px;
+        background-color: #dfe0e3;
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+  }
+}

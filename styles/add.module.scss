@@ -1,0 +1,210 @@
+$tab: '(max-width: 991px)';
+$screen: '(min-width: 992px)';
+
+.add {
+  padding: 40px;
+  @media #{$tab} {
+    padding: 15px;
+  }
+  &_back {
+    background-color: var(--secondaryColor);
+    display: flex;
+    width: 180px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 1px 2px var(--box);
+    color: var(--third);
+    cursor: pointer;
+    @media #{$tab} {
+      width: 160px;
+    }
+    &:hover {
+      opacity: 0.6;
+    }
+    svg {
+      fill: var(--third);
+    }
+  }
+  &_head {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &_logo {
+    font-size: 36px;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--third);
+    @media #{$tab} {
+      font-size: 30px;
+    }
+  }
+  &_container {
+    margin: 150px auto;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: var(--secondaryColor);
+    width: 95%;
+    @media #{$tab} {
+      width: 100%;
+      padding: 30px 0px;
+    margin: 100px 0;
+    }
+    &_head {
+      text-align: center;
+      font-size: 25px;
+      font-weight: bold;
+      color: var(--third);
+    }
+    &_form {
+      margin: 0 auto;
+      margin-top: 50px;
+      margin-bottom: 20px;
+      width: 80%;
+      display: block;
+      label {
+        font-size: 16px;
+        font-weight: bold;
+        color: var(--third);
+        margin-bottom: 20px;
+        text-align: right !important;
+      }
+      span {
+        margin: 0 3%;
+      }
+      input {
+        margin-top: 10px;
+        width: 100%;
+        border: 2px solid #a8aab1;
+        color: var(--third);
+        height: 40px;
+        border-radius: 5px;
+        padding: 10px;
+        background-color: var(--bgColor);
+        &::placeholder {
+          color: #7d7d7d;
+        }
+        &:focus {
+          border-color: #7d7d7d;
+        }
+      }
+      textarea {
+        margin-top: 10px;
+        width: 100%;
+        height: 150px;
+        border: 2px solid #a8aab1;
+        color: var(--third);
+        border-radius: 10px;
+        padding: 10px;
+        resize: none;
+        &:focus {
+          border-color: #7d7d7d;
+        }
+      }
+      &_btn {
+        font-size: 18px;
+        height: 50px;
+        width: 100px;
+        background: #464644;
+        display: inline-block;
+        color: #fff;
+        border-radius: 10px;
+        line-height: 2.7;
+        margin-top: 50px;
+        margin-left: 10px;
+        cursor: pointer;
+        &_disable {
+          font-size: 18px;
+          height: 50px;
+          width: 100px;
+          background: #464644;
+          display: inline-block;
+          color: #fff;
+          border-radius: 10px;
+          line-height: 2.7;
+          cursor: pointer;
+          opacity: 0.6;
+          pointer-events: none;
+        }
+        &:hover {
+          background: #7d7d7d;
+        }
+      }
+      &_btn2 {
+        font-size: 18px;
+        line-height: 2.7;
+        height: 50px;
+        width: 100px;
+        background: #eaeaea;
+        display: inline-block;
+        color: #fff;
+        border-radius: 10px;
+        margin-right: 10px;
+        margin-top: 50px;
+        color: #333;
+        cursor: pointer;
+        &:hover {
+          background: #bfbfbf;
+        }
+      }
+    }
+    &_form1 {
+      margin: 0 auto;
+      margin-top: 50px;
+      margin-bottom: 20px;
+      width: 80%;
+      display: block;
+      text-align: center;
+      label {
+        position: relative;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        display: inline-block;
+        padding: 10px 40px;
+        border-radius: 20px;
+        background-color: #e4e6eb;
+        color: #000;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.2s;
+        &:hover {
+          transition: 0.2s;
+          background: #5f6771;
+          color: #fff;
+        }
+      }
+      input {
+        pointer-events: none;
+        position: absolute;
+        opacity: 0;
+      }
+      img {
+        margin-top: 30px;
+        width: 300px;
+        border-radius: 20px;
+        @media #{$tab}{
+          width: 200px;
+        }
+      }
+
+      &_images {
+        img {
+          margin: 5px 10px;
+          width: 200px;
+          @media #{$tab}{
+            width: 200px;
+          margin: 5px 0;
+          }
+        }
+      }
+    }
+    &_line {
+      margin: 10px auto;
+      width: 50%;
+      background-color: #7d7d7d;
+      height: 4px;
+      border-radius: 30px;
+    }
+  }
+}

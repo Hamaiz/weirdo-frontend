@@ -1,0 +1,44 @@
+.seller {
+  padding: 40px;
+  &_back {
+    background-color: var(--secondaryColor);
+    display: flex;
+    width: 180px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 1px 2px var(--box);
+    color: var(--third);
+    
+    cursor: pointer;
+    &:hover {
+      opacity: 0.6;
+    }
+    svg{
+      fill:var(--third);
+    }
+  }
+  &_head{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--third);
+  }
+  &_logo{
+    font-size: 36px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  &_main {
+    margin-top: 100px;
+    &_form {
+      margin: 0 auto;
+      margin-bottom: 100px;
+      padding: 30px;
+      border-radius: 20px;
+      background-color: var(--secondaryColor);
+      width: 90%;
+    }
+  }
+}

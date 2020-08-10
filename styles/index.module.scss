@@ -1,0 +1,26 @@
+.index{
+  &_heading{
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 150px;
+    margin-bottom: 50px;
+    margin-left: 2%;
+    color: var(--third);
+  } 
+  &_show{
+      margin-right: 5px;
+      text-decoration: none;
+      margin-top: -20px;
+      margin-bottom: 50px;
+      cursor: pointer;
+      color: #7d7d7d;
+      &:hover{
+          text-decoration: underline;
+      }
+  }
+  &_bg{
+    background-color: var(--secondaryColor);
+    padding: 50px 30px;
+    border-radius: 20px;
+  }
+}

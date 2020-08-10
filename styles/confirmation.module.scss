@@ -1,0 +1,12 @@
+.confirmation {
+  width: 100%;
+  height: calc(100vh - 150px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &_error{
+      font-size: 25px;
+      font-weight: bold;
+      color: #dd4b39;
+  }
+}
