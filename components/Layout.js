@@ -6,7 +6,7 @@ import Footer from './Footer'
 
 // Styles
 
-const Layout = ({ children }) => {
+const Layout = ({ children, keyword = 'weirdo, online, shopping' }) => {
   return (
     <>
       <Head>
@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
           name='description'
           content='Weirdo is a online shopping site which provides for you various different methods of payment.'
         />
-        <meta name='keywords' content='weirdo, online, shopping' />
+        <meta name='keywords' content={keyword} />
         <link
           rel='apple-touch-icon'
           sizes='180x180'

@@ -1,14 +1,16 @@
 // Imoprt
 import { facebookIcon, twitterIcon, cartIcon, heartIcon } from '../svg'
+import Link from 'next/link'
 
 // Style
 import style from './Card.module.scss'
 
-const Card = () => {
+const Card = ({ d }) => {
   const twiiterShare = (e) => {
     e.preventDefault()
-    const url = e.target.getAttribute('data-url')
-    const heading = e.target.getAttribute('data-heading')
+    const url =
+      window.hostname === 'localhost' ? 'http://localhost/p/' + p.slug : ''
+    const heading = d.title
     const twitterWindow = window.open(
       `https://twitter.com/share?text=${heading}&url=${url}&hashtags=weirdo`
     )
@@ -20,7 +22,8 @@ const Card = () => {
 
   const facebookShare = (e) => {
     e.preventDefault()
-    const url = 'https://www.weirdo.com/product/ajazz-ak33'
+    const url =
+      window.hostname === 'localhost' ? 'http://localhost/p/' + p.slug : ''
 
     const facebookWindow = window.open(
       `https://www.facebook.com/sharer/sharer.php?url=${url}`
@@ -51,10 +54,20 @@ const Card = () => {
             <button title='Add to whishlist'>{heartIcon}</button>
           </div>
         </div>
-        <a href='/' className={style.other}>
-          other
-        </a>
-        {/* <div class={style.containers}></div> */}
+        <div className={style.containers}>
+          <img src={d.image} alt={d.slug} loading='lazy' />
+          <Link href={'/p/[slug]'} as={'/p/' + d.slug}>
+            <div className={style.card_title + ' ' + 'center'} title={d.title}>
+              {d.title.length > 30 ? d.title.slice(0, 30) + '...' : d.title}
+            </div>
+          </Link>
+          <div className={style.card_price}>${d.price}</div>
+          <div className={style.card_rating}>
+            <div
+              className={style.card_stars}
+              style={{ '--rating': `${3}` }}></div>
+          </div>
+        </div>
       </div>
     </>
   )

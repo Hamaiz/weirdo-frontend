@@ -7,9 +7,9 @@
   margin-left: auto;
   position: relative;
   transition: box-shadow 0.5s;
-  &:hover{
-      transition: box-shadow 0.5s;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,.25);
+  &:hover {
+    transition: box-shadow 0.5s;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
   }
 
   &_desc {
@@ -50,10 +50,10 @@
         justify-content: center;
         align-items: center;
         pointer-events: visible;
-        svg{
+        svg {
           pointer-events: none;
-            width: 20px;
-            height: 20px;
+          width: 20px;
+          height: 20px;
         }
         &:hover {
           background: #000;
@@ -61,21 +61,21 @@
           box-shadow: 0 0 1rem -0.25rem var(--background);
         }
         &:nth-child(1) {
-            left: 62.5%;
-            top: 18.75%;
-          }
-          &:nth-child(2) {
-            left: 37.5%;
-            top: 18.75%;
-          }
-          &:nth-child(3) {
-            left: 18.75%;
-            top: 37.5%;
-          }
-          &:nth-child(4) {
-            left: 18.75%;
-            top: 62.5%;
-          }
+          left: 62.5%;
+          top: 18.75%;
+        }
+        &:nth-child(2) {
+          left: 37.5%;
+          top: 18.75%;
+        }
+        &:nth-child(3) {
+          left: 18.75%;
+          top: 37.5%;
+        }
+        &:nth-child(4) {
+          left: 18.75%;
+          top: 62.5%;
+        }
       }
     }
     &:hover .multi_button,
@@ -85,7 +85,6 @@
       opacity: 1;
       pointer-events: visible;
     }
-
   }
   &:hover .multi_button,
   .multi_button:focus-within {
@@ -94,11 +93,75 @@
     opacity: 1;
     pointer-events: visible;
   }
-}
 
-.other{
+  img {
+    border-radius: 20px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
     position: absolute;
-    top: 10px;
+    top: 0px;
+  }
+  &_title {
+    padding: 0px 7px;
+    color: var(--third);
+    margin-top: 5px;
+    font-weight: bold;
+    position: absolute;
+    top: 210px;
     left: 50%;
     transform: translateX(-50%);
+    cursor: pointer;
+    height: 45px;
+    width: 100%;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &_price {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0px 7px;
+    text-align: right;
+    position: absolute;
+    top: 260px;
+    width: 100%;
+    color: #e81123;
+  }
+
+  &_rating {
+    padding: 0px 7px;
+    text-align: left;
+    position: absolute;
+    top: 290px;
+  }
+
+  &_stars {
+    --percent: calc(var(--rating) / 5 * 100%);
+
+    display: inline-block;
+    font-size: 20px;
+    font-family: Times;
+    line-height: 1;
+    background: linear-gradient(
+      90deg,
+      #333 var(--percent),
+      #b9b9b9 var(--percent)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    &::before {
+      content: '★★★★★';
+      letter-spacing: 3px;
+    }
+  }
 }
+
+// .other {
+//   position: absolute;
+//   top: 10px;
+//   left: 50%;
+//   transform: translateX(-50%);
+// }

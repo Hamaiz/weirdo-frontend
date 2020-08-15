@@ -61,7 +61,7 @@ const Main = () => {
           className='carousel-item grey darken-4 white-text'
           href='#four!'></div>
       </div>
-
+      {/* 
       <div className='container'>
         <div className={style.main_categories}>
           <div className={style.main_heading}>Categories</div>
@@ -89,7 +89,7 @@ const Main = () => {
             </span>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }

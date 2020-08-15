@@ -12,6 +12,8 @@ import postSeller from '../reducers/seller/postSeller'
 import postProduct from '../reducers/seller/postProduct'
 import getProductSeller from '../reducers/seller/getProductSeller'
 import getMessage from '../reducers/message/getMessage'
+import getResultItems from '../reducers/customer/getResultItems'
+import getLatest from '../reducers/customer/getLatest'
 
 const rootReducer = combineReducers({
   signUp,
@@ -25,6 +27,8 @@ const rootReducer = combineReducers({
   postProduct,
   getProductSeller,
   getMessage,
+  getResultItems,
+  getLatest,
 })
 
 export default rootReducer

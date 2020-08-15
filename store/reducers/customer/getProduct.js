@@ -4,7 +4,7 @@ const initialState = {
   all: [],
 }
 
-const GET_USER_PRODUCT_ERROR = (state = initialState, action) => {
+const getProduct = (state = initialState, action) => {
   switch (action.type) {
     case 'GET_USER_PRODUCT':
       return {
